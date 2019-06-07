@@ -12,7 +12,7 @@
       <h2 class="subtitle">
         Can you believe it
       </h2>
-      <a class="button is-large is-fullwidth">Login</a>
+      <a href="/#/login" class="button is-large is-fullwidth">Login</a>
       <a class="button is-large is-fullwidth">Register</a>
     </div>
   </div>

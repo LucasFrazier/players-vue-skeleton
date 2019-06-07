@@ -55,7 +55,7 @@
 <style lang="scss" scoped>
   .container {
 
-    padding: 25px;
+    padding: 24px;
   }
 </style>
 

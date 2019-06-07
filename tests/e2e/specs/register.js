@@ -5,7 +5,7 @@ describe('Register Page', () => {
 	});
 
 	it('Contains email and password labels', () => {
-		cy.visit('/register');
+		cy.visit('http://localhost:8080/#/register');
 		cy.contains('First Name');
 		cy.contains('Last Name');
 		cy.contains('Email');
@@ -15,14 +15,14 @@ describe('Register Page', () => {
 	});
 
 	it('Accepts valid email and password', () => {
-		cy.visit('/register');
+		cy.visit('http://localhost:8080/#/register');
 		cy.get('#firstName').type('Billy');
 		cy.get('#lastName').type('Bob');
 		cy.get('#email').type('billybob@example.com');
 		cy.get('#password').type('billybob@example.com');
 		cy.get('#confirmPassword').type('billybob@example.com');
 		cy.get('#register').click();
-		cy.url().should('eq', 'http://localhost:3000/roster');
+		cy.url().should('eq', 'http://localhost:8080/#/roster');
 		cy.contains('Roster');
 	});
 });

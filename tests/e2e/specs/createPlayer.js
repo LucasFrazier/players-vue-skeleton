@@ -8,7 +8,7 @@ describe('Add player page', () => {
 	});
 
 	it('Contains player field labels', () => {
-		cy.visit('/player/new');
+		cy.visit('http://localhost:8080/#/player/new');
 		cy.contains('First Name');
 		cy.contains('Last Name');
 		cy.contains('Rating');
@@ -16,13 +16,13 @@ describe('Add player page', () => {
 	});
 
 	it('Accepts valid email and password', () => {
-		cy.visit('/player/new');
+		cy.visit('http://localhost:8080/#/player/new');
 		cy.get('#firstName').type('Tom');
 		cy.get('#lastName').type('Riddle');
 		cy.get('#rating').type('10');
 		cy.get('#handedness').select('Right');
 		cy.get('#create').click();
-		cy.url().should('eq', 'http://localhost:3000/roster');
+		cy.url().should('eq', 'http://localhost:8080/#/roster');
 		cy.contains('Tom');
 	});
 });

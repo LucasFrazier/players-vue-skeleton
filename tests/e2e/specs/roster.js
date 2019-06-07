@@ -6,7 +6,7 @@ describe('Roster Page', () => {
 	});
 
 	it('Contains players', () => {
-		cy.visit('/roster');
+		cy.visit('http://localhost:8080/#/roster');
 		cy.contains('Harry');
 		cy.contains('Hermione');
 		cy.contains('Ron');

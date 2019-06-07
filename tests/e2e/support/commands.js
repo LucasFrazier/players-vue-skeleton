@@ -35,7 +35,7 @@ Cypress.Commands.add('login', () => {
     'https://players-api.developer.alchemy.codes/api/players',
     'fixture:getPlayers.json',
   );
-  cy.visit('/login');
+  cy.visit('http://localhost:8080/#/login');
   cy.get('#email').type('billybob@example.com');
   cy.get('#password').type('abc123');
   cy.get('#login').click();
